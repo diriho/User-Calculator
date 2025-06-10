@@ -1,1 +1,3 @@
-# User-Calculator
+# User-Calculator 🧮🧮🧮
+A simple and user-friendly calculator built with Python. This calculator performs all basic arithmetic operations—addition, subtraction, multiplication, and division. 
+It is designed to gracefully handle all types of input errors, such as invalid entries, division by zero, and more. With clear prompts and helpful feedback, it's an ideal tool for anyone looking for a smooth and intuitive calculation experience 🚀🚀😉😉🎉🎉. 

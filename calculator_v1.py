@@ -13,7 +13,7 @@ def print_help_menu():
     print("To exit, please press: e, or E")
     print("To call the help menu, please press: h, or H")
 
-#TASK -1: 
+# add function 
 def add(history):
     "This function takes two numbers as user input, stores them in 2 variables and returns their sum. output format: x + y = z"
     print("You selected addition.")
@@ -23,6 +23,7 @@ def add(history):
     history.append(expression) # 'append' is a list method of python list, which add a new item to the end of the list
     print(expression)
 
+# subtract function
 def subtract(history):
     "This function takes two numbers as user input, stores them in 2 variables and returns their difference. output format: x - y = z"
     print("You selected subtraction.")
@@ -31,7 +32,8 @@ def subtract(history):
     expression = str(a) + " - " + str(b) + " = " + str(a - b)
     history.append(expression)  
     print(expression)
-    
+
+# multiply function    
 def multiply(history):
     "This function takes two numbers as user input, stores them in 2 variables and returns their product. # output format: x * y = z"
     print("You selected multiplication.")
@@ -40,7 +42,8 @@ def multiply(history):
     expression = str(a) + " * " + str(b) + " = " + str(a * b)
     history.append(expression)       
     print(expression)
-    
+
+# divide function   
 def divide(history):
     "This function takes two numbers as user_input, stores them in 2 variables and returns their quotient. output format: x / y = z"
     print("You selected division.")
@@ -55,7 +58,7 @@ def divide(history):
     history.append(expression)
     print(expression)
    
-#TASK -3:
+# 
 def do_calculation(operation, history):  
     "This function takes a user input and calls the appropriate function to perform the calculation."
     if operation == 'a' or operation == 'A':
@@ -70,7 +73,7 @@ def do_calculation(operation, history):
     elif operation == 'd' or operation == 'D':
         divide(history)
 
-# TASK -4: part 3a, recursion way
+# helper function that helps with catch user typos recursion way
 def catch_user_input():
     user_input = input("Please enter a letter: ")
     if user_input in ['a', 'A', 's', 'S', 'm', 'M', 'd', 'D', 'e', 'E']:
@@ -83,7 +86,7 @@ def catch_user_input():
         print("Invalid input. Please enter a letter.")
         return catch_user_input()
     
-## Assume this functions works pretty well, we are not going to talk about what's going on here in class
+## helper function that helps with catching number input errors
 def catch_number_input():
     try:
         number = float(input("Please enter a number: "))
@@ -93,19 +96,19 @@ def catch_number_input():
         return catch_number_input()
 
 
-# TASK -5: main functionm
-
+# # main program starts here
 print_help_menu()
 operation = catch_user_input()
 op_history_list = [] ## store the history of operations
+
+# keep looping/doing operations the user decides to exit (by pressing e or E))
 while operation != 'e' and operation != 'E':
     do_calculation(operation, op_history_list)
     print()
     print_help_menu()
     operation = catch_user_input()
     
-# when the user press e or E, meaning that he wants to exit the program
-print()
+# when the user press e or E, stop the program and show the list of operations you have done earlier
 print("Goodbye!")
 print("Here is the history of your operations:")
 for i in range(len(op_history_list)):

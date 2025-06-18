@@ -57,6 +57,7 @@ def divide(history):
     history.append(expression)
     print(expression)
 
+# do calculation function, which takes two parameters: operation (str) and history(list)
 def do_calculation(operation, history):  
     "This function takes a user input and calls the appropriate function to perform the calculation."
     if operation == 'a' or operation == 'A':

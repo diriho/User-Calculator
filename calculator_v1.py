@@ -1,10 +1,8 @@
 ## Tujenge--programming class
-## user calculator
+## user calculator - a simple calculator program that performs basic arithmetic operations.
 
-## This is a simple calculator program that performs basic arithmetic operations.
+## This function prints the help menu for the calculator
 def print_help_menu():
-    "This function prints the help menu for the calculator."
-
     print("Welcome. Please select a calculation to perform by inputting the appropriate letter.")
     print("To do addition, input: a or A")
     print("To do subtraction, input: s or S")
@@ -94,7 +92,6 @@ def catch_number_input():
     except :
         print("Invalid input. Please enter a number.")
         return catch_number_input()
-
 
 # # main program starts here
 print_help_menu()

@@ -5,6 +5,7 @@ so we dont have to worry about each function."""
 
 import myLibrary
 
+# print the welcome message and the help menu
 myLibrary.print_help_menu()
 answer_list = []
 operation = myLibrary.catch_user_input()
